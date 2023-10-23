@@ -9,3 +9,15 @@ ul{
   margin: 0;
   padding: 0;
 }
+
+
+/* TopEvents fieldset styling */
+.top-event-fieldset {
+  border: 2px transparent rgb(62, 57, 57);
+  box-sizing: border-box;
+  grid-area: 1/1;
+  padding: 20px;
+  width: inherit;
+  border-radius: 5px;
+  margin-bottom: 3rem;
+}
