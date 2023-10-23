@@ -11,7 +11,7 @@ const App = () => {
       <Navbar></Navbar>
       <VisualSlide></VisualSlide>
       <TopEvents/>
-      <EventDetail/>
+     
     </div>
   );
 };
