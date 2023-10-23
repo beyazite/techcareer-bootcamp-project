@@ -1,11 +1,11 @@
 
 import { createTheme} from '@mui/material/styles';
-import { blueGrey } from '@mui/material/colors';
+import { blueGrey} from '@mui/material/colors';
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: blueGrey[500],
+      main: blueGrey[400],
       contrastText: '#fff',
     },
     light: {
@@ -14,6 +14,7 @@ const theme = createTheme({
     },
     dark: {
       main: blueGrey[800],
+      second: blueGrey[900],
       contrastText: '#fff'
     },
 
