@@ -16,7 +16,6 @@ const App = () => {
       <VisualSlide></VisualSlide>
       <Filter></Filter>
       <TopEvents />
-      {/* <Events></Events> */}
       <Subscribe></Subscribe>
       <Footer></Footer>
     </div>

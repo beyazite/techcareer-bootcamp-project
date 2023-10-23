@@ -3,12 +3,15 @@ import theme from "../common/color";
 
 function Item(props) {
   return (
+    <div style={{backgroundColor:theme.palette.light.main}}>
     <ThemeProvider theme={theme}>
       <Paper
         elevation={1}
         sx={{
           padding: "1.5rem",
           maxHeight: "400px",
+          backgroundColor: theme.palette.light.main,
+          
         }}
       >
         <Container maxWidth="lg" color="light">
@@ -22,6 +25,7 @@ function Item(props) {
         </Container>
       </Paper>
     </ThemeProvider>
+    </div>
   );
 }
 
