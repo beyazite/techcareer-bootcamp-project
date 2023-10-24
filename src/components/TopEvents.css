@@ -1,0 +1,121 @@
+
+  html,
+  body {
+    position: relative;
+    height: 100%;
+  }
+  
+  body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .swiper {
+    width: 100%;
+    height: 100%;
+       
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 1.5rem;
+    background: transparent;
+    
+     /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2.5rem;
+    margin-top: 1rem;
+    
+  }
+
+  .swiper-slide:hover {
+    cursor: pointer;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  }
+
+
+  .slider-item {
+    position: relative;  
+     margin: 0 0.1em;
+    
+    
+  }
+
+  .slider-item-text {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 1rem;
+  max-height: 20%;
+  }
+
+  .tooltip-text {
+  visibility: hidden;
+  max-width: 100%;
+  background-color: rgb(34, 33, 33, 0.5);
+  color: #e3d8d8;
+  text-align: center;
+  
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  top: 0;
+  left: -7px;
+  z-index: 10;
+  overflow: visible;
+  }
+
+  .slider-item:hover .tooltip-text {
+    visibility: visible;
+  }
+
+  .autoplay-progress {
+    position: absolute;
+    right: 7px;
+    bottom: 5px;
+    z-index: 10;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #878282;
+  }
+  
+  .autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 3px;
+    stroke: #878282;
+    fill: none;
+    stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+  }
+
+  
+
+  
+  
+  
