@@ -1,0 +1,7 @@
+.logoImg {
+  width:300px; /* Genişlik */
+  height: auto; /* Yükseklik otomatik olarak ayarlanır */
+}
+.secondaryColor{
+  background-color: #31d7a9;
+}
