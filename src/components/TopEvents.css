@@ -51,8 +51,6 @@
   .slider-item {
     position: relative;  
      margin: 0 0.1em;
-    
-    
   }
 
   .slider-item-text {
@@ -61,27 +59,14 @@
   left: 16px;
   font-size: 1rem;
   max-height: 20%;
-  }
-
-  .tooltip-text {
-  visibility: hidden;
-  max-width: 100%;
-  background-color: rgb(34, 33, 33, 0.5);
-  color: #e3d8d8;
-  text-align: center;
+  max-width: 90%;
   
-  border-radius: 6px;
- 
-  /* Position the tooltip text - see examples below! */
-  position: absolute;
-  top: 0;
-  left: -7px;
-  z-index: 10;
-  overflow: visible;
   }
 
-  .slider-item:hover .tooltip-text {
-    visibility: visible;
+  .event-title {
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   }
 
  .btn-div {
