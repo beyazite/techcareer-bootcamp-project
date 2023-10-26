@@ -6,11 +6,17 @@ import "swiper/css/pagination";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
 import "./VisualSlide.css";
 import Navbar from "./Navbar";
+import Filter from "./Filter";
+
+
+
+
 const VisualSlide = () => {
   const [activeSlide, setActiveSlide] = useState(0);
 
   return (
-    <section className="image">
+    <div>
+    <section className="image " >
       <Navbar></Navbar>
       <div className="img-section"></div>
       <Swiper
@@ -35,6 +41,7 @@ const VisualSlide = () => {
         pagination={true}
         modules={[EffectCoverflow, Pagination, Autoplay]}
         className="mySwiper"
+        style={{paddingTop:'170px'}}
       >
         <SwiperSlide
           style={{
@@ -155,6 +162,9 @@ const VisualSlide = () => {
         </SwiperSlide>
       </Swiper>
     </section>
+     
+
+    </div>
   );
 };
 

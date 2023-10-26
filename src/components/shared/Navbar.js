@@ -1,11 +1,34 @@
 import React from "react";
 import logo from "../../assets/logo.png";
 import classes from "./Navbar.module.css";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav class="navbar navbar-expand-lg  pb-5 ">
-      <div class="container-fluid container mt-4 mb-4 d-flex justify-content-between">
+    <nav
+      className={`navbar navbar-expand-lg fixed-top ${
+        scrolled ? `opacity-75 ${classes["bg-mainLightColor"]}` : ""
+      }`}
+    >
+      <div class="container-fluid container mt-3 mb-3 d-flex justify-content-between ">
         <a class="navbar-brand " href="#id">
           <div>
             <img src={logo} alt="" className={classes.logoImg}></img>
@@ -63,7 +86,7 @@ const Navbar = () => {
           <div>
             <button
               type="button"
-              className={`btn btn-lg rounded-pill fw-bold px-4 ${classes.secondaryColor}`}
+              className={`btn btn-lg rounded-pill fw-bold px-4 ${classes["bg-secondaryColor"]}`}
             >
               LOGIN
             </button>

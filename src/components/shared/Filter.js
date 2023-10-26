@@ -3,13 +3,13 @@ import classes from "../shared/Filter.module.css";
 
 const Filter = () => {
   return (
-    <section className="container position-absolute top-100 start-50 translate-middle">
+    <section className="container" style={{width:'850px'}}>
       <div
         className={`card border border-0 p-5 shadow-lg p-3 mb-5 rounded ${classes["bg-mainColor"]}`}
       >
         <div class="card-header">
           <p className={`fs-5 fw-bold pt-3 ${classes.secondaryColor}`}>
-            FIND YOUR OWN EVENTS NOW{" "}
+            FIND YOUR OWN EVENTS NOW
           </p>
         </div>
         <div class="card-body p-0">
@@ -17,9 +17,7 @@ const Filter = () => {
             <div class={`card border border-0 ${classes["bg-mainLightColor"]}`}>
               <div class="card-body">
                 <div class="container text-center">
-                  <div class="row justify-content-between d-flex align-items-center gap-4">
-                    <div class="col-4 mt-3 ">
-                      <div class="input-group mb-3 ">
+                      <div class="input-group mb-4 ">
                         <span
                           class="input-group-text bg-secondary"
                           id="basic-addon1"
@@ -34,10 +32,8 @@ const Filter = () => {
                           aria-describedby="basic-addon1"
                         />
                       </div>
-                    </div>
-                    <div class="col-7 ">
-                      <div className="d-flex justify-content-end gap-4">
-                        <div className="d-flex  gap-2">
+                  <div class="row justify-content-between d-flex align-items-center gap-4">
+                        <div className="col d-flex gap-2">
                           <i class="fa-solid fa-film fa-xl mt-3"></i>
                           <select
                             class="form-select me-2 bg-secondary"
@@ -49,7 +45,7 @@ const Filter = () => {
                             <option value="3">Three</option>
                           </select>
                         </div>
-                        <div className="d-flex gap-2">
+                        <div className="col d-flex gap-2">
                           <i class="fa-solid fa-city fa-xl mt-3"></i>
                           <select
                             class="form-select me-2 bg-secondary"
@@ -61,7 +57,7 @@ const Filter = () => {
                             <option value="3">Three</option>
                           </select>
                         </div>
-                        <div className="d-flex gap-2">
+                        <div className="col d-flex gap-2">
                           <i class="fa-solid fa-calendar-days fa-xl mt-3"></i>
                           <select
                             class="form-select bg-secondary"
@@ -73,8 +69,6 @@ const Filter = () => {
                             <option value="3">Three</option>
                           </select>
                         </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>

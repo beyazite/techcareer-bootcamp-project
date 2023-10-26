@@ -1,7 +1,14 @@
 .logoImg {
-  width:300px; /* Genişlik */
-  height: auto; /* Yükseklik otomatik olarak ayarlanır */
+  width:300px; 
+  height: auto; 
 }
-.secondaryColor{
-  background-color: #31d7a9;
+.bg-secondaryColor{
+  background-color: #31d7a9 !important;
 }
+.bg-mainColor{
+  background-color: #042053 !important;
+}
+.bg-mainLightColor {
+  background-color: #0B2657 !important;
+}
+

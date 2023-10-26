@@ -1,5 +1,9 @@
-.secondaryColor {
-  color: #31d7a9 !important;
+.logoImg {
+  width:300px; 
+  height: auto; 
+}
+.bg-secondaryColor {
+  background-color: #31d7a9 !important;
 }
 .bg-mainColor{
   background-color: #042053 !important;
