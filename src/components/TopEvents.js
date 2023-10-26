@@ -78,10 +78,8 @@ function TopEvents() {
                       <SwiperSlide key={item.id}>
                           <div className="slider-item">
                           <img src={item.thumbnailUrl} className="" alt="..." />
-                
                           <div className="slider-item-text">
-                          <h6>{item.title}</h6>
-                          <span className="tooltip-text">{item.title}</span>
+                          <h6 title={item.title} className="event-title">{item.title}</h6>
                           </div>
                         </div>
                       </SwiperSlide>    
@@ -140,10 +138,8 @@ function TopEvents() {
                       <SwiperSlide key={item.id} >
                           <div className="slider-item">
                           <img src={item.thumbnailUrl} className="" alt="..." />
-                
                           <div className="slider-item-text">
-                          <h6>{item.title}</h6>
-                          <span className="tooltip-text">{item.title}</span>
+                          <h6 title={item.title} className="abc">{item.title}</h6>
                           </div>
                         </div>
                       </SwiperSlide>    
@@ -204,10 +200,8 @@ function TopEvents() {
                       <SwiperSlide key={item.id} >
                           <div className="slider-item">
                           <img src={item.thumbnailUrl} className="" alt="..." />
-                
                           <div className="slider-item-text">
-                          <h6>{item.title}</h6>
-                          <span className="tooltip-text">{item.title}</span>
+                          <h6 title={item.title} className="abc">{item.title}</h6>
                           </div>
                         </div>
                       </SwiperSlide>    
