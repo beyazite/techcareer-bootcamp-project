@@ -25,21 +25,26 @@ function TopEvents() {
     }, []);
   
 
-    // swiper.js timer code, do not touch
-  const progressCircle = useRef(null);
-  const progressContent = useRef(null);
-  const onAutoplayTimeLeft = (s, time, progress) => {
-    progressCircle.current.style.setProperty('--progress', 1 - progress);
-    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
-  };
+    
   
     return (
       <>
-      <div className="container">
-      <fieldset className="border top-event-fieldset">
-       <legend className=" float-none w-auto ps-2 pe-2">Music</legend>
-            <button className="btn btn-outline-secondary float-end">View More</button>
+      <div className="container mt-5">
+      <fieldset className="border border-light rounded ps-3 pe-3">
+       <legend className="float-none w-auto ps-2 pe-2 text-light">Music</legend>
+       {/* new row and col for button because float-end without new row and div disabled btn click */}
+       <div className="row ">
+        <div className="col "> <button className="btn btn-outline-light float-end">View More</button></div>
+       </div>
+
               <Swiper
+                  style={{
+                      "--swiper-pagination-color": "#fff",
+                      "--swiper-pagination-bullet-inactive-color": "#999999",
+                      "--swiper-pagination-bullet-inactive-opacity": "0.2",
+                      "--swiper-pagination-bullet-size": "8px",
+                      "--swiper-pagination-bullet-horizontal-gap": "5px"
+                      }}
                   slidesPerView={1}
                   breakpoints={{
                     500: {
@@ -65,13 +70,12 @@ function TopEvents() {
                     clickable: true,
                   }}
                   modules={[Autoplay,FreeMode, Pagination]}
-                  onAutoplayTimeLeft={onAutoplayTimeLeft}
                   className="mySwiper"
                 >
 
                   {
                     data.map((item) => ( 
-                      <SwiperSlide key={item.id} >
+                      <SwiperSlide key={item.id}>
                           <div className="slider-item">
                           <img src={item.thumbnailUrl} className="" alt="..." />
                 
@@ -83,21 +87,26 @@ function TopEvents() {
                       </SwiperSlide>    
                     ))   }
           
-          <div className="autoplay-progress" slot="container-end">
-                    <svg viewBox="0 0 48 48" ref={progressCircle}>
-                      <circle cx="24" cy="24" r="20"></circle>
-                    </svg>
-                    <span ref={progressContent}></span>
-                  </div>
+          
                 </Swiper>
             </fieldset>
       </div>
 
-      <div className="container">
-      <fieldset className="border top-event-fieldset">
-       <legend className=" float-none w-auto ps-2 pe-2">Events - Art</legend>
-            <button className="btn btn-outline-secondary float-end">View More</button>
+      <div className="container mt-5">
+      <fieldset className="border border-light rounded ps-3 pe-3">
+       <legend className=" float-none w-auto ps-2 pe-2 text-light">Events - Art</legend>
+           {/* new row and col for button because float-end without new row and div disabled btn click */}
+       <div className="row ">
+        <div className="col "> <button className="btn btn-outline-light float-end">View More</button></div>
+       </div>
               <Swiper
+                  style={{
+                    "--swiper-pagination-color": "#fff",
+                    "--swiper-pagination-bullet-inactive-color": "#999999",
+                    "--swiper-pagination-bullet-inactive-opacity": "0.2",
+                    "--swiper-pagination-bullet-size": "8px",
+                    "--swiper-pagination-bullet-horizontal-gap": "5px"
+                    }}
                   slidesPerView={1}
                   breakpoints={{
                     500: {
@@ -123,7 +132,6 @@ function TopEvents() {
                     clickable: true,
                   }}
                   modules={[Autoplay,FreeMode, Pagination]}
-                  onAutoplayTimeLeft={onAutoplayTimeLeft}
                   className="mySwiper"
                 >
 
@@ -141,22 +149,28 @@ function TopEvents() {
                       </SwiperSlide>    
                     ))   }
           
-          <div className="autoplay-progress" slot="container-end">
-                    <svg viewBox="0 0 48 48" ref={progressCircle}>
-                      <circle cx="24" cy="24" r="20"></circle>
-                    </svg>
-                    <span ref={progressContent}></span>
-                  </div>
+          
                 </Swiper>
             </fieldset>
       </div>
 
 
-      <div className="container">
-      <fieldset className="border top-event-fieldset">
-       <legend className=" float-none w-auto ps-2 pe-2">Sports</legend>
-            <button className="btn btn-outline-secondary float-end">View More</button>
+      <div className="container mt-5 mb-5">
+      <fieldset className="border border-light rounded ps-3 pe-3">
+       <legend className=" float-none w-auto ps-2 pe-2 text-light">Sports</legend>
+             {/* new row and col for button because float-end without new row and div disabled btn click */}
+       <div className="row ">
+        <div className="col "> <button className="btn btn-outline-light float-end">View More</button></div>
+       </div>
+            
               <Swiper
+                  style={{
+                    "--swiper-pagination-color": "#fff",
+                    "--swiper-pagination-bullet-inactive-color": "#999999",
+                    "--swiper-pagination-bullet-inactive-opacity": "0.2",
+                    "--swiper-pagination-bullet-size": "8px",
+                    "--swiper-pagination-bullet-horizontal-gap": "5px"
+                    }}
                   slidesPerView={1}
                   breakpoints={{
                     500: {
@@ -182,7 +196,6 @@ function TopEvents() {
                     clickable: true,
                   }}
                   modules={[Autoplay,FreeMode, Pagination]}
-                  onAutoplayTimeLeft={onAutoplayTimeLeft}
                   className="mySwiper"
                 >
 
@@ -200,12 +213,7 @@ function TopEvents() {
                       </SwiperSlide>    
                     ))   }
           
-          <div className="autoplay-progress" slot="container-end">
-                    <svg viewBox="0 0 48 48" ref={progressCircle}>
-                      <circle cx="24" cy="24" r="20"></circle>
-                    </svg>
-                    <span ref={progressContent}></span>
-                  </div>
+          
                 </Swiper>
             </fieldset>
       </div>
