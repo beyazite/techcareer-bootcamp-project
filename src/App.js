@@ -1,12 +1,10 @@
 import React from "react";
-
-
-
+import Events from "./components/Events";
 
 const App = () => {
   return (
-    <div> 
-      
+    <div>
+      <Events></Events>
     </div>
   );
 };
