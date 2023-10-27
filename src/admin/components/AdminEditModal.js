@@ -1,6 +1,6 @@
 import React from 'react'
 
-const color = () => {
+const AdminEditModal = () => {
   return (
     <div>
       
@@ -8,6 +8,4 @@ const color = () => {
   )
 }
 
-export default color
-
-
+export default AdminEditModal
