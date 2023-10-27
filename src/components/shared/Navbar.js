@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../../assets/logo.png";
 import classes from "./Navbar.module.css";
 import { useEffect, useState } from "react";
+import {Link } from "react-router-dom"
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -29,11 +30,11 @@ const Navbar = () => {
       }`}
     >
       <div className="container-fluid container mt-3 mb-3 d-flex justify-content-between ">
-        <a className="navbar-brand " href="#id">
+        <Link to="/" className="navbar-brand " >
           <div>
             <img src={logo} alt="" className={classes.logoImg}></img>
           </div>
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -48,32 +49,32 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 nav-underline ">
             <li className="nav-item">
-              <a className="nav-link active " aria-current="page" href="#id">
+              <Link to="/"  className="nav-link active " aria-current="page" >
                 <button type="button" className="btn rounded-pill fs-6 fw-bold">
                   HOME
                 </button>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link  " aria-current="page" href="#id">
+              <Link to="/search-result" className="nav-link  " aria-current="page" >
                 <button type="button" className="btn rounded-pill fs-6 fw-bold">
                   MUSIC
                 </button>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link  " aria-current="page" href="#id">
+              <Link to="/search-result" className="nav-link  " aria-current="page">
                 <button type="button" className="btn rounded-pill fs-6 fw-bold">
                   EVENTS
                 </button>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link  " aria-current="page" href="#id">
+              <Link to="/search-result" className="nav-link  " aria-current="page">
                 <button type="button" className="btn rounded-pill fs-6 fw-bold">
                   SPORT
                 </button>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link " aria-current="page" href="#id">

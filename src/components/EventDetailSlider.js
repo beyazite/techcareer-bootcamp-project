@@ -22,8 +22,9 @@ export default function EventDetailSlider() {
         });
     }, []);
   return (
+  <>
   
-    <Swiper
+  <Swiper
       effect={"coverflow"}
       grabCursor={true}
       centeredSlides={true}
@@ -53,13 +54,16 @@ export default function EventDetailSlider() {
         }}
       >
         <div className="slide-content">
-          <img src={item.thumbnailUrl} alt="" />
+          <img src={item.url} alt="" />
           
         </div>
       </SwiperSlide>
         ))
-      }      
+      }
+
     </Swiper>
- 
+    
+    
+   </>
   );
 }

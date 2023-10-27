@@ -139,7 +139,7 @@ function TopEvents() {
                           <div className="slider-item">
                           <img src={item.thumbnailUrl} className="" alt="..." />
                           <div className="slider-item-text">
-                          <h6 title={item.title} className="abc">{item.title}</h6>
+                          <h6 title={item.title} className="event-title">{item.title}</h6>
                           </div>
                         </div>
                       </SwiperSlide>    
@@ -201,7 +201,7 @@ function TopEvents() {
                           <div className="slider-item">
                           <img src={item.thumbnailUrl} className="" alt="..." />
                           <div className="slider-item-text">
-                          <h6 title={item.title} className="abc">{item.title}</h6>
+                          <h6 title={item.title} className="event-title">{item.title}</h6>
                           </div>
                         </div>
                       </SwiperSlide>    
