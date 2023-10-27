@@ -7,34 +7,34 @@ const Filter = () => {
       <div
         className={`card border border-0 p-5 shadow-lg p-3 mb-5 rounded ${classes["bg-mainColor"]}`}
       >
-        <div class="card-header">
+        <div className="card-header">
           <p className={`fs-5 fw-bold pt-3 ${classes.secondaryColor}`}>
             FIND YOUR OWN EVENTS NOW
           </p>
         </div>
-        <div class="card-body p-0">
-          <blockquote class="blockquote mb-0 mt-4">
-            <div class={`card border border-0 ${classes["bg-mainLightColor"]}`}>
-              <div class="card-body">
-                <div class="container text-center">
-                      <div class="input-group mb-4 ">
+        <div className="card-body p-0">
+          <blockquote className="blockquote mb-0 mt-4">
+            <div className={`card border border-0 ${classes["bg-mainLightColor"]}`}>
+              <div className="card-body">
+                <div className="container text-center">
+                      <div className="input-group mb-4 ">
                         <span
-                          class="input-group-text bg-secondary"
+                          className="input-group-text bg-secondary"
                           id="basic-addon1"
                         >
-                          <i class="fa-solid fa-magnifying-glass "></i>
+                          <i className="fa-solid fa-magnifying-glass "></i>
                         </span>
                         <input
                           type="text"
-                          class={`form-control ${classes["bg-mainLightColor"]}`}
+                          className={`form-control ${classes["bg-mainLightColor"]}`}
                           placeholder="Search for events..."
                           aria-label="Search"
                           aria-describedby="basic-addon1"
                         />
                       </div>
-                  <div class="row justify-content-between d-flex align-items-center gap-4">
+                  <div className="row justify-content-between d-flex align-items-center gap-4">
                         <div className="col d-flex gap-2">
-                          <i class="fa-solid fa-film fa-xl mt-3"></i>
+                          <i className="fa-solid fa-film fa-xl mt-3"></i>
                           <select
                             class="form-select me-2 bg-secondary"
                             aria-label="Default select example"
@@ -46,9 +46,9 @@ const Filter = () => {
                           </select>
                         </div>
                         <div className="col d-flex gap-2">
-                          <i class="fa-solid fa-city fa-xl mt-3"></i>
+                          <i className="fa-solid fa-city fa-xl mt-3"></i>
                           <select
-                            class="form-select me-2 bg-secondary"
+                            className="form-select me-2 bg-secondary"
                             aria-label="Default select example"
                           >
                             <option selected>City</option>
@@ -58,16 +58,8 @@ const Filter = () => {
                           </select>
                         </div>
                         <div className="col d-flex gap-2">
-                          <i class="fa-solid fa-calendar-days fa-xl mt-3"></i>
-                          <select
-                            class="form-select bg-secondary"
-                            aria-label="Default select example"
-                          >
-                            <option selected>Date</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
+                          <i className="fa-solid fa-calendar-days fa-xl mt-3"></i>
+                          <input type="date" className="form-control bg-secondary" />
                         </div>
                   </div>
                 </div>

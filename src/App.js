@@ -1,10 +1,11 @@
-import React from "react";
-import Events from "./components/Events";
+import React from "react"
+
+
 
 const App = () => {
   return (
     <div>
-      <Events></Events>
+     
     </div>
   );
 };

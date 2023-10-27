@@ -28,14 +28,14 @@ const Navbar = () => {
         scrolled ? `opacity-75 ${classes["bg-mainLightColor"]}` : ""
       }`}
     >
-      <div class="container-fluid container mt-3 mb-3 d-flex justify-content-between ">
-        <a class="navbar-brand " href="#id">
+      <div className="container-fluid container mt-3 mb-3 d-flex justify-content-between ">
+        <a className="navbar-brand " href="#id">
           <div>
             <img src={logo} alt="" className={classes.logoImg}></img>
           </div>
         </a>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -43,40 +43,40 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-underline ">
-            <li class="nav-item">
-              <a class="nav-link active " aria-current="page" href="#id">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0 nav-underline ">
+            <li className="nav-item">
+              <a className="nav-link active " aria-current="page" href="#id">
                 <button type="button" className="btn rounded-pill fs-6 fw-bold">
                   HOME
                 </button>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link  " aria-current="page" href="#id">
+            <li className="nav-item">
+              <a className="nav-link  " aria-current="page" href="#id">
                 <button type="button" className="btn rounded-pill fs-6 fw-bold">
                   MUSIC
                 </button>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link  " aria-current="page" href="#id">
+            <li className="nav-item">
+              <a className="nav-link  " aria-current="page" href="#id">
                 <button type="button" className="btn rounded-pill fs-6 fw-bold">
                   EVENTS
                 </button>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link  " aria-current="page" href="#id">
+            <li className="nav-item">
+              <a className="nav-link  " aria-current="page" href="#id">
                 <button type="button" className="btn rounded-pill fs-6 fw-bold">
                   SPORT
                 </button>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="#id">
+            <li className="nav-item">
+              <a className="nav-link " aria-current="page" href="#id">
                 <button type="button" className="btn rounded-pill fs-6 fw-bold">
                   CONTACT
                 </button>

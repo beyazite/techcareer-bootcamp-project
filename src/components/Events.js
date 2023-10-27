@@ -327,7 +327,7 @@ const Events = () => {
           <div className="row justify-content d-flex flex-wrap">
             {imageUrls.slice(0, 15).map((imageUrl, index) => (
               <div key={index} className="col-lg-4 col-md-6 col-sm-12 mb-4">
-                <a href="#" className=" h-100">
+                <a href="#id" className=" h-100">
                   <img
                     className="img img-thumbnail"
                     src={imageUrl}
@@ -341,27 +341,27 @@ const Events = () => {
           <nav aria-label="Page navigation example">
             <ul className="pagination justify-content-center">
               <li className="page-item">
-                <a className="page-link" href="#" aria-label="Previous">
+                <a className="page-link" href="#id" aria-label="Previous">
                   <span aria-hidden="true">&laquo;</span>
                 </a>
               </li>
               <li className="page-item">
-                <a className="page-link" href="#">
+                <a className="page-link" href="#id">
                   1
                 </a>
               </li>
               <li className="page-item">
-                <a className="page-link" href="#">
+                <a className="page-link" href="#id">
                   2
                 </a>
               </li>
               <li className="page-item">
-                <a className="page-link" href="#">
+                <a className="page-link" href="#id">
                   3
                 </a>
               </li>
               <li className="page-item">
-                <a className="page-link" href="#" aria-label="Next">
+                <a className="page-link" href="#id" aria-label="Next">
                   <span aria-hidden="true">&raquo;</span>
                 </a>
               </li>

@@ -7,9 +7,9 @@ const Subscribe = () => {
       <section className='container' style={{width:'850px'}}>
         <div className={classes['bg-mainColor']}></div>
         <div
-          class={`card border border-0 p-4 shadow-lg opacity-75 ${classes["bg-mainLightColor"]}`}
+          className={`card border border-0 p-4 shadow-lg opacity-75 ${classes["bg-mainLightColor"]}`}
         >
-          <div class="card-body text-center">
+          <div className="card-body text-center">
             <h5 className={`fw-bold pb-3 ${classes.secondaryColor}`}>
               SUBSCRIBE NOW
             </h5>
@@ -21,16 +21,16 @@ const Subscribe = () => {
 
             <div className="row">
               <div className="col-6 mx-auto">
-                <div class="input-group mt-5  position-relative">
+                <div className="input-group mt-5  position-relative">
                   <input
                     type="text"
-                    class="form-control p-4 rounded-pill bg-transparent"
+                    className="form-control p-4 rounded-pill bg-transparent"
                     placeholder="Email Address"
                     aria-label="Recipient's username"
                     aria-describedby="button-addon2"
                   />
                   <button
-                    class={`btn rounded-pill position-absolute top-50 end-0 translate-middle-y p-3 px-4 me-2 fw-semibold ${classes["bg-secondaryColor"]}`}
+                    className={`btn rounded-pill position-absolute top-50 end-0 translate-middle-y p-3 px-4 me-2 fw-semibold ${classes["bg-secondaryColor"]}`}
                     type="button"
                     id="button-addon2"
                   >
