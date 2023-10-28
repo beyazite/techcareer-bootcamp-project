@@ -21,13 +21,35 @@ export default function EventDetail() {
     <>
      <div className="container mt-5 mb-5">
       {/* first row, event name and share start */}
-    <div className="row  rounded-1 pt-2 pb-2" style={{backgroundColor: "#0B2657"}}>
-        <div className="col-lg-9 col-9 mb-2 ">
+    <div className="row rounded-1 pt-2 pb-2" style={{backgroundColor: "#0B2657"}}>
+        <div className="col-9 mb-2 ">
             <div className="item display-6 text-white text-uppercase">{data.name}</div>
         </div>
 
-        <div className="col-lg-3 col-3  mb-2 d-flex align-items-center justify-content-end">
-            <div className="item text-white">Share on Social Media</div>
+        <div className="col-3 mb-2 d-flex align-items-center justify-content-end gap-2">
+         
+              <button
+                className="border rounded-circle p-2 d-flex justify-content-center align-items-center btn btn-outlined"
+                title="Share on Facebook"
+                style={{ width: "40px ", height: "40px" }}
+                
+              >
+                <a href="https://facebook.com" target='_blank' style={{color: "inherit"}}><i className="fa-brands fa-facebook-f fa-xl "></i></a>
+              </button>
+              <button
+                className="border rounded-circle p-2 d-flex justify-content-center align-items-center btn btn-outlined"
+                title="Share on X"
+                style={{ width: "40px ", height: "40px" }}
+              >
+                <a href="https://twitter.com" target="_blank" style={{color: "inherit"}}><i className="fa-brands fa-twitter fa-xl"></i></a>
+              </button>
+              <button
+                className="border rounded-circle p-2 d-flex justify-content-center align-items-center btn btn-outlined"
+                title="Share on Instagram"
+                style={{ width: "40px ", height: "40px" }}
+              >
+                <a href="https://instagram.com" target="_blank" style={{color: "inherit"}}><i className="fa-brands fa-instagram fa-xl"></i></a>
+              </button>
         </div>
     </div>
     {/* first row ends */}
