@@ -34,7 +34,7 @@ body {
 .swiper-slide img {
   display: block;
   width: 100%;
-  border-radius: 10px;
+  border-radius:10px;
   overflow: hidden;
 }
 
@@ -61,6 +61,7 @@ body {
   z-index: -1;
   opacity: 0.2;
 }
+
 .slide-content {
   position: relative;
 }

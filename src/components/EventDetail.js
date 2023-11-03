@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import EventDetailSlider from "./EventDetailSlider"
+import Maps from './Maps';
 
 export default function EventDetail() {
 
@@ -21,13 +22,35 @@ export default function EventDetail() {
     <>
      <div className="container mt-5 mb-5">
       {/* first row, event name and share start */}
-    <div className="row  rounded-1 pt-2 pb-2" style={{backgroundColor: "#0B2657"}}>
-        <div className="col-lg-9 col-9 mb-2 ">
+    <div className="row rounded-1 pt-2 pb-2" style={{backgroundColor: "#0B2657"}}>
+        <div className="col-9 mb-2 ">
             <div className="item display-6 text-white text-uppercase">{data.name}</div>
         </div>
 
-        <div className="col-lg-3 col-3  mb-2 d-flex align-items-center justify-content-end">
-            <div className="item text-white">Share on Social Media</div>
+        <div className="col-3 mb-2 d-flex align-items-center justify-content-end gap-2">
+         
+              <button
+                className="border rounded-circle p-2 d-flex justify-content-center align-items-center btn btn-outlined"
+                title="Share on Facebook"
+                style={{ width: "40px ", height: "40px" }}
+                
+              >
+                <a href="https://facebook.com" target='_blank' style={{color: "inherit"}}><i className="fa-brands fa-facebook-f fa-xl "></i></a>
+              </button>
+              <button
+                className="border rounded-circle p-2 d-flex justify-content-center align-items-center btn btn-outlined"
+                title="Share on X"
+                style={{ width: "40px ", height: "40px" }}
+              >
+                <a href="https://twitter.com" target="_blank" style={{color: "inherit"}}><i className="fa-brands fa-twitter fa-xl"></i></a>
+              </button>
+              <button
+                className="border rounded-circle p-2 d-flex justify-content-center align-items-center btn btn-outlined"
+                title="Share on Instagram"
+                style={{ width: "40px ", height: "40px" }}
+              >
+                <a href="https://instagram.com" target="_blank" style={{color: "inherit"}}><i className="fa-brands fa-instagram fa-xl"></i></a>
+              </button>
         </div>
     </div>
     {/* first row ends */}
@@ -124,7 +147,7 @@ export default function EventDetail() {
                  <div className='row justify-content-center'>
         <div className="col-12 col-md-8 border border-3 rounded-1 p-0">
             <div className="item">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.3872089985102!2d28.909373075593518!3d41.06052801620662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab088cd043bf5%3A0xcf4b63fe45d3c8ef!2s%C5%9Eanzelize%20Kafe!5e0!3m2!1str!2str!4v1698061902676!5m2!1str!2str" width="100%" height="360x" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <Maps/>
             </div>
         </div>
         </div>
