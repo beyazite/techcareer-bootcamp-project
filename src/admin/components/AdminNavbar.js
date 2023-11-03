@@ -14,7 +14,7 @@ const AdminNavbar = () => {
           type="button"
           class="btn btn-lg btn-secondary border-0 rounded-pill p-3"
           data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
+          data-bs-target="#logout"
         >
           <div className="d-flex align-items-center justify-content-between gap-3 ">
             <i class="fa-solid fa-circle-user fa-2xl"></i>
@@ -24,7 +24,7 @@ const AdminNavbar = () => {
 
         <div
           class="modal fade"
-          id="exampleModal"
+          id="logout"
           tabindex="-1"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"

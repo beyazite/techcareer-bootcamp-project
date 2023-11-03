@@ -4,6 +4,8 @@ import Home from "./pages/Home"
 import Results from "./pages/Results";
 import Detail from "./pages/Detail"
 import NotFound from "./pages/NotFound";
+
+
 const App = () => {
   return (
     <div>
@@ -13,7 +15,7 @@ const App = () => {
       <Route path="/event" element={<Detail/>} />
       <Route path="/*" element={<NotFound/>} />
     </Routes>
-   
+    
     </div>
   );
 };

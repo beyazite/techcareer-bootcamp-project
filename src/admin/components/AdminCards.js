@@ -1,7 +1,12 @@
 import React from "react";
 import "./Admin.css";
+import AdminEditModal from "./AdminEditModal";
 
-const AdminCards = () => {
+const AdminCards = (props) => {
+
+
+  const data = props.sendData;
+  
   return (
     <div className="container mt-5">
       <div class="card border-0 bg-mainLightColor p-3">
@@ -36,13 +41,13 @@ const AdminCards = () => {
         <div class="card-body">
           <div class="card bg-secondary" style={{ width: "18rem" }}>
             <img
-              src="https://via.placeholder.com/300"
+              src={data.imageURLValue}
               class="card-img-top"
               alt=""
+              style={{ height: "18rem" }}
             />
             <div class="card-body">
-              <h5 class="card-title">Event Name</h5>
-
+              <h5 class="card-title">{data.nameValue}</h5>
               <button
                 type="button"
                 class="btn btn-sm btn-primary"
@@ -52,42 +57,7 @@ const AdminCards = () => {
                 View More
               </button>
 
-              <div
-                class="modal fade"
-                id="viewMore"
-                tabindex="-1"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog modal-fullscreen">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">
-                        Modal title
-                      </h1>
-                      <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div class="modal-body">...</div>
-                    <div class="modal-footer">
-                      <button
-                        type="button"
-                        class="btn btn-secondary"
-                        data-bs-dismiss="modal"
-                      >
-                        Close
-                      </button>
-                      <button type="button" class="btn btn-primary">
-                        Save changes
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <AdminEditModal data={data}></AdminEditModal>
             </div>
           </div>
         </div>
