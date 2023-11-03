@@ -85,12 +85,14 @@ const Navbar = () => {
             </li>
           </ul>
           <div>
+            <Link to="/admin-panel">
             <button
               type="button"
               className={`btn btn-lg rounded-pill fw-bold px-4 ${classes["bg-secondaryColor"]}`}
             >
               LOGIN
             </button>
+            </Link>
           </div>
         </div>
       </div>
