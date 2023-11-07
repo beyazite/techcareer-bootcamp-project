@@ -7,16 +7,20 @@ const containerStyle = {
   };
   
   // temporary map location, recieve it from endpoint
-  const center = {
-    lat: -3.745,
-    lng: -38.523
-  };
+  // const center = {
+  //   lat: -3.745,
+  //   lng: -38.523
+  // };
 
   // Enis has REACT_APP_MAPS_API_KEY in local .env file. 
-  export default function Maps() {
+  export default function Maps({location}) {
     const {isLoaded } = useJsApiLoader({ id: "event-location",
    googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY});
 
+   const center = {
+    lat: location.latlng[0],
+    lng: location.latlng[1],
+   }
 
 return isLoaded ? (
     <GoogleMap  mapContainerStyle={containerStyle} center={center} zoom={10} >

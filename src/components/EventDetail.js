@@ -3,20 +3,35 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import EventDetailSlider from "./EventDetailSlider"
 import Maps from './Maps';
+import { getEventDetail } from '../store/EventDetailSlice';
+import { useDispatch, useSelector } from 'react-redux';
 
 export default function EventDetail() {
 
-    const [data, setData] = useState([]);
+    // const [data, setData] = useState([]);
 
-    useEffect(() => {
-      axios.get('https://jsonplaceholder.typicode.com/comments/1')
-        .then((response) => {
-          setData(response.data);
-        })
-        .catch((error) => {
-          console.error('Fetching error: ', error);
-        });
+    // useEffect(() => {
+    //   axios.get('https://jsonplaceholder.typicode.com/comments/1')
+    //     .then((response) => {
+    //       setData(response.data);
+    //     })
+    //     .catch((error) => {
+    //       console.error('Fetching error: ', error);
+    //     });
+    // },[]);
+
+    const dispatch = useDispatch();
+     
+    const {eventDetail} = useSelector((state) => state.eventDetail);
+    console.log(eventDetail);
+    
+    useEffect(()=>{
+      dispatch(getEventDetail())
     },[]);
+
+    if(eventDetail.length === 0) {
+      return <div>Datas are Loading</div>
+    }
 
   return (
     <>
@@ -24,7 +39,7 @@ export default function EventDetail() {
       {/* first row, event name and share start */}
     <div className="row rounded-1 pt-2 pb-2" style={{backgroundColor: "#0B2657"}}>
         <div className="col-9 mb-2 ">
-            <div className="item display-6 text-white text-uppercase">{data.name}</div>
+            <div className="item display-6 text-white text-uppercase">{eventDetail.name.official}</div>
         </div>
 
         <div className="col-3 mb-2 d-flex align-items-center justify-content-end gap-2">
@@ -68,7 +83,7 @@ export default function EventDetail() {
    {/* third row, event detail and ticket-date sections start */}
     <div className="row">
         <div className="col-lg-6 col-12 mb-2 border border-3 rounded-1 d-flex align-items-start justify-content-center">
-            <div className="item h5 pt-4">{data.body} {data.email}</div>
+            <div className="item h5 pt-4">{eventDetail.flags.alt} {eventDetail.population}</div>
         </div>
 
        
@@ -147,7 +162,7 @@ export default function EventDetail() {
                  <div className='row justify-content-center'>
         <div className="col-12 col-md-8 border border-3 rounded-1 p-0">
             <div className="item">
-            <Maps/>
+            <Maps location={eventDetail}/>
             </div>
         </div>
         </div>
