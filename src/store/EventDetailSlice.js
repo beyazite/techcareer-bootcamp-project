@@ -8,15 +8,17 @@ const initialState = {
     eventDetail: [],
 }
 
-export const getEventDetail = createAsyncThunk("get events", async() => {
-    const response = await axios.get("https://restcountries.com/v3.1/name/turkey");
+export const getEventDetail = createAsyncThunk("get-eventdetail", async(name) => {
+    const response = await axios.get(`https://restcountries.com/v3.1/name/${name}`);
     return response.data[0];
 })
 
 export const eventDetailSlice = createSlice({
     name: "eventDetail",
     initialState,
-    reducers: {},
+    reducers: {
+
+    },
     extraReducers: (builder) => {
          builder.addCase(getEventDetail.fulfilled, (state,action) => {
             state.eventDetail = action.payload;
@@ -24,5 +26,6 @@ export const eventDetailSlice = createSlice({
     }
 })
 
+export const { } = eventDetailSlice.actions;
 
 export default eventDetailSlice.reducer;

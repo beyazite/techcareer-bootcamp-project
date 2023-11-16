@@ -6,12 +6,6 @@ const containerStyle = {
     height: '360px'
   };
   
-  // temporary map location, recieve it from endpoint
-  // const center = {
-  //   lat: -3.745,
-  //   lng: -38.523
-  // };
-
   // Enis has REACT_APP_MAPS_API_KEY in local .env file. 
   export default function Maps({location}) {
     const {isLoaded } = useJsApiLoader({ id: "event-location",

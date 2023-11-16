@@ -1,4 +1,8 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import {  getEventDetail} from "../store/EventDetailSlice";
+
 const Events = () => {
   const imageUrls = [
     "https://images.pexels.com/photos/1038002/pexels-photo-1038002.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
@@ -33,6 +37,18 @@ const Events = () => {
     marginLeft: "20px",
     marginTop: "5px",
   };
+
+  const navigate = useNavigate();
+
+  const {filtered} = useSelector(state => state.filtered);
+  console.log(filtered);
+
+  const dispatch = useDispatch();
+
+  const getEventName = (eventName) => {
+      dispatch(getEventDetail(eventName));
+      navigate("/event");
+  }
 
   return (
     <div className="container mt-3">
@@ -325,7 +341,7 @@ const Events = () => {
         </div>
         <div className="col-lg-9 col-md-8 col-sm-6 md-ms-auto">
           <div className="row justify-content d-flex flex-wrap">
-            {imageUrls.slice(0, 15).map((imageUrl, index) => (
+            {/* {imageUrls.slice(0, 15).map((imageUrl, index) => (
               <div key={index} className="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <a href="#id" className=" h-100">
                   <img
@@ -335,7 +351,16 @@ const Events = () => {
                   />
                 </a>
               </div>
-            ))}
+            ))} */}
+             { 
+               filtered.map((event,index) => (
+                <div key={index} className="col-lg-4 col-md-6 col-sm-12 mb-4" >
+                  <a href="#id" className="h-100" >
+                    <img className="img img-thumbnail" src={event.flags.png} alt={`Image ${event.name.common}`} onClick={() => getEventName(event.name.common)} />
+                  </a>
+                </div>
+               )) 
+            }
           </div>
 
           <nav aria-label="Page navigation example">

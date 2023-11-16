@@ -1,7 +1,39 @@
-import React from "react";
+import React , {useEffect, useState} from "react";
 import classes from "../shared/Filter.module.css";
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { filterEvents, getAllEvents, getSearchWord} from "../../store/SearchSlice";
+
 
 const Filter = () => {
+
+  const navigate = useNavigate();
+
+  const dispatch = useDispatch();
+  
+  const [inputValue, setInputValue ] = useState();
+
+  const {allEvents} = useSelector(state => state.allEvents);
+  console.log(allEvents);
+
+  const {filtered} = useSelector(state => state.filtered);
+console.log(filtered);
+
+  useEffect(()=>{
+    dispatch(getAllEvents())
+  },[]);
+
+  
+
+
+  const sendSearchResult = (event) => {
+   if(event.key === "Enter") {
+    dispatch(getSearchWord(inputValue));
+    dispatch(filterEvents());
+    navigate("/search-result");
+   }
+  };
+
   return (
     <section className="container" style={{width:'850px'}}>
       <div
@@ -30,6 +62,8 @@ const Filter = () => {
                           placeholder="Search for events..."
                           aria-label="Search"
                           aria-describedby="basic-addon1"
+                          onChange={(e) => setInputValue(e.target.value)}
+                          onKeyDown={sendSearchResult}
                         />
                       </div>
                   <div className="row justify-content-between d-flex align-items-center gap-4">

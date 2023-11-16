@@ -24,10 +24,8 @@ export default function EventDetail() {
      
     const {eventDetail} = useSelector((state) => state.eventDetail);
     console.log(eventDetail);
-    
-    useEffect(()=>{
-      dispatch(getEventDetail())
-    },[]);
+
+
 
     if(eventDetail.length === 0) {
       return <div>Datas are Loading</div>
